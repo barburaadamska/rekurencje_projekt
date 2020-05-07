@@ -19,6 +19,16 @@ def sprawdzanie(user_element, user_list):        # JUŻ DZIAŁA, JEST GITUWENCKA
             return sprawdzanie(user_element, user_list[1:])
 
 
+def sprawdzanie(user_element, user_list):  # TO TEŻ DZIAŁA, ALE LEPIEJ XD
+    if not user_list:
+        return False
+    else:
+        if user_list[0] == user_element:
+            return True
+        else:
+            return sprawdzanie(user_element, user_list[1:])
+
+
 for i in range(3):
     user_elements = int(input("Ile elementow ma miec Twoja lista? "))
     user_list = generate_list(user_elements)
